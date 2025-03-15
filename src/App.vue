@@ -1,47 +1,35 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import "./assets/app.css"
+
+const handleGetStart=()=>{
+  window.open('https://github.com/MiyamizuSu')
+}
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <el-container class="blog-outer">
+    <el-header class="blog-title-background">
+      <el-text class="blog-title  text">
+        MiyamizuSu
+      </el-text>
+    </el-header>
+    <el-main class="blog-main-background">
+      <div>
+        <!-- <a href="" id="github-link" v-show=false></a> -->
+        <el-button class="blog-start-button" size="large" round color="#F7CFD8" @click="handleGetStart">Get Start!
+        </el-button>
+      </div>
+    </el-main>
+    <el-footer class="blog-bottom-background">
+        <el-text class="blog-bottom-copyright text">
+          Copyright © 2024 Mygo Inc. All rights reserved.
+        </el-text>
+    </el-footer>
+  </el-container>
 </template>
 
+
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
