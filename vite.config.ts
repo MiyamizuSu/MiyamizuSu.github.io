@@ -16,7 +16,7 @@ export default defineConfig({
       output:{
         manualChunks: (id) => {
 					if (id.includes('node_modules')) {
-					  return 'vendor'; // 所有第三方依赖统一打成 vendor.js
+					  return 'vendor'; 
 					}
 				},
         assetFileNames() {
