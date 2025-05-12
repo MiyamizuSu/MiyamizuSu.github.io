@@ -67,19 +67,22 @@ type Cardprops={
     mainContent:string
 }
 
+
+
+
 const cardsProps:Cardprops[]=[
     {
-        imgUrl:'src/assets/1.jpg',
+        imgUrl:new URL('../../assets/1.jpg', import.meta.url).pathname,
         title:'Me&Life',
         mainContent:"Primarily documents various aspects of the blogger's life, work, and social interactions with friends."
     },
     {
-        imgUrl:'src/assets/3.jpg',
+        imgUrl:new URL('../../assets/3.jpg', import.meta.url).pathname,
         title:'Me&Study',
         mainContent:"It mainly records some bloggers' campus studies, their feelings and insights gained from learning code, as well as their face-to-face experiences"
     },
     {
-        imgUrl:'src/assets/4.jpg',
+        imgUrl:new URL('../../assets/4.jpg', import.meta.url).pathname,
         title:'Me&NEU',
         mainContent:"The blogger is an undergraduate student of the NEU. He mainly records something uncomfortable and insights about the NEU"
     }
